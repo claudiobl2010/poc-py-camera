@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webcam</title>
+
+    <link type="text/css" rel="stylesheet" media="screen" href="{{ url_for('static', filename='css/style.css') }}" />
+
+    <script src="{{ url_for('static', filename='js/socket.io.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="header-left">
+            <img src="{{ url_for('static', filename='img/LavAI_logo.png') }}">
+            <span>POC | Webcam no Browser</span>    
+        </div>
+        <div class="header-right">
+            <img src="{{ url_for('static', filename='img/HIAE_logo.jpg') }}">
+            <span>
+                powered by
+                <br>
+                HIT | Albert Einstein
+            </span>    
+
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="main-top">
+            <div class="area-video-1">
+                <video id="lavAI-video-1" autoplay></video>
+                <select id="sel-video-1">
+                    <option value="">Selecione uma câmera</option>
+                </select>
+            </div>
+            <div class="area-video-2">
+                <video id="lavAI-video-2" autoplay></video>
+                <select id="sel-video-2">
+                    <option value="">Selecione uma câmera</option>
+                </select>      
+            </div>
+            <div class="botoes">
+                <video id="lavAI-video-filtered" autoplay/></video>
+                <div id="lavAI-getFrame">GET FRAME</div>
+                <div class="framesArea">
+                    <div id="lavAI-getFrame-1s">GET FRAME (1s)</div>
+                    <div id="framesAreaTexto">Quantidade de Frames capturados: <span id="qtdCapt">0</span></div>
+                </div>
+                <div class="sendFramesToServer">
+                    <div id="btnSenToServer" data-state="stopped">SEND TO SERVER</div>
+                    <div id="txtSendToServer">Qtd. IMGs recebidas no Server: <span id="qtdImgsRecebidas">Desconectado</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="main-bottom">
+            <div id="lavAI-frames"></div>
+        </div>   
+    </div>
+
+    <div class="error"></div>
+  
+</body>
+
+</html>

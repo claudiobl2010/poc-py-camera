@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #003b6d;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left img {
+    width: 150px;
+}
+
+.header-left span {
+    font-family: arial;
+    color: #FFFFFF;
+    font-size: 24px;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right img {
+    width: 40px;
+    border-radius: 25px;
+}
+
+.header-right span {
+    color: #FFFFFF;
+    font-family: arial;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+}
+
+.main {
+    display: none;
+}
+
+.error {
+    display: none;
+    padding: 20px;
+    color: #d45252;
+    font-family: arial;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main-top {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.area-video-1 {
+    padding: 10px;
+}
+
+.area-video-2 {
+    padding: 10px;
+}
+
+video {
+    display: block;
+    border-radius: 20px;
+    transform: scaleX(-1);
+    border: 1px solid #666;
+    background: #CCC;
+    width: 480px;
+    height: 360px;
+}
+
+select {
+    display: block;
+    width: 480px;
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.botoes {
+    margin-left: 60px;
+}
+
+#lavAI-getFrame {
+    display: flex;
+    justify-content: center;
+    background-color: #003b6d;
+    color: #FFFFFF;
+    font-family: arial;
+    font-size: 20px;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+#lavAI-getFrame:hover {
+    background-color: #025094;
+}
+
+#lavAI-getFrame-1s {
+    display: flex;
+    justify-content: center;
+    background-color: #003b6d;
+    color: #FFFFFF;
+    font-family: arial;
+    font-size: 20px;
+    padding: 20px;
+    width: 250px;
+    min-width: 250px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+#lavAI-getFrame-1s:hover {
+    background-color: #025094;
+}
+
+.framesArea {
+    display: flex;
+    align-items: center;
+}
+
+#framesAreaTexto {
+    margin-left: 30px;
+    font-family: arial;
+    font-size: 18px;
+}
+
+#qtdCapt {
+    font-weight: bold;
+}
+
+
+
+
+
+
+.sendFramesToServer {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+
+#btnSenToServer {
+    display: flex;
+    justify-content: center;
+    background-color: #003b6d;
+    color: #FFFFFF;
+    font-family: arial;
+    font-size: 20px;
+    padding: 20px;
+    width: 250px;
+    min-width: 250px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#btnSenToServer:hover {
+    background-color: #025094;
+}
+
+#txtSendToServer {
+    margin-left: 30px;
+    font-family: arial;
+    font-size: 18px;
+}
+
+#qtdImgsRecebidas {
+    font-weight: bold;
+}
+
+
+
+
+
+#lavAI-video-filtered {
+    width: 160px;
+    height: 120px;
+    filter: contrast(4) brightness(5) grayscale(1);
+}
+
+.main-bottom {
+    padding: 10px;
+    width: 400px;
+}
+
+canvas {
+    width: 180px;
+    padding: 10px;
+    border-radius: 20px;
+    transform: scaleX(-1);
+}
