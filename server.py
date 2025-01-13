@@ -6,8 +6,8 @@ from flask_socketio import SocketIO, send
 
 app = Flask(__name__)
 
-app.template_folder = '%s/../web/templates' % app.root_path
-app.static_folder = '%s/../web/static' % app.root_path
+app.template_folder = '%s/web/templates' % app.root_path
+app.static_folder = '%s/web/static' % app.root_path
 
 socketio = SocketIO(app)
 
@@ -40,7 +40,7 @@ def handle_message(msg):
 
         img_rgb_bytes = base64.b64decode(img_rgb)
 
-        # img_rgb_file = open('./src/data_imgs/%s_rgb.jpg' % file_prefix_name, 'wb')
+        # img_rgb_file = open('./data_imgs/%s_rgb.jpg' % file_prefix_name, 'wb')
         # img_rgb_file.write(img_rgb_bytes)
         # img_rgb_file.close()
 
@@ -52,7 +52,7 @@ def handle_message(msg):
 
         img_depth_bytes = base64.b64decode(img_depth)
 
-        # img_depth_file = open('./src/data_imgs/%s_depth.jpg' % file_prefix_name, 'wb')
+        # img_depth_file = open('./data_imgs/%s_depth.jpg' % file_prefix_name, 'wb')
         # img_depth_file.write(img_depth_bytes)
         # img_depth_file.close()
 

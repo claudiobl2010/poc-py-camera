@@ -1,2 +1,0 @@
-#!/bin/bash
-gunicorn --bind 0.0.0.0 --chdir src --worker-class eventlet --workers 1 app.server:app
