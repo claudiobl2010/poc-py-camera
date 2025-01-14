@@ -99,7 +99,8 @@ const getFrame = (video1Element, video2Element) => {
 }
 
 const initWebSocket = () => {
-    let socket = io.connect('ws://' + document.domain + ':' + location.port + '/ws');
+
+    let socket = io.connect('ws' + window.location.protocol == 'https:' ? 's' : '' + '://' + document.domain + ':' + location.port + '/ws');
         
     socket.on('connect', function() {
         const qtdImgsRecebidas = document.getElementById('qtdImgsRecebidas');
